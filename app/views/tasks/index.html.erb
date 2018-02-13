@@ -1,0 +1,12 @@
+<div class="wrapper">
+<h1>My Tasks</h1>
+
+<ul>
+<% @tasks.each do |task| %>
+
+<li><%=link_to task.title, "tasks/#{task.id}" %></li>
+<% end %>
+</ul>
+
+<h4> <%= link_to '+Add a new Task', "tasks/new" %></h4>
+</div>
